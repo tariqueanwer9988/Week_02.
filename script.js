@@ -1,27 +1,20 @@
-const images = document.querySelectorAll(".gallery img");
+function updateClock() {
 
-const lightbox = document.getElementById("lightbox");
+    const now = new Date();
 
-const lightboxImage = document.getElementById("lightboxImage");
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
 
-const close = document.getElementById("close");
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
 
+    const time = hours + ":" + minutes + ":" + seconds;
 
-images.forEach(function(image) {
+    document.getElementById("clock").textContent = time;
+}
 
-    image.addEventListener("click", function() {
+updateClock();
 
-        lightbox.style.display = "flex";
-
-        lightboxImage.src = image.src;
-
-    });
-
-});
-
-
-close.addEventListener("click", function() {
-
-    lightbox.style.display = "none";
-
-});
+setInterval(updateClock, 1000);
