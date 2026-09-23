@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Digital Clock</title>
+    <title>Interactive Image Gallery</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Digital Clock</h1>
+    <h1>Interactive Image Gallery</h1>
 
-    <div id="clock">
-        00:00:00
+    <div class="gallery">
+
+        <img src="https://picsum.photos/id/1015/600/400" alt="Image 1">
+        <img src="https://picsum.photos/id/1016/600/400" alt="Image 2">
+        <img src="https://picsum.photos/id/1018/600/400" alt="Image 3">
+        <img src="https://picsum.photos/id/1020/600/400" alt="Image 4">
+        <img src="https://picsum.photos/id/1024/600/400" alt="Image 5">
+        <img src="https://picsum.photos/id/1025/600/400" alt="Image 6">
+        <img src="https://picsum.photos/id/1035/600/400" alt="Image 7">
+        <img src="https://picsum.photos/id/1039/600/400" alt="Image 8">
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+
+        <span id="close">&times;</span>
+
+        <img id="lightboxImage" src="" alt="Large Image">
+
     </div>
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
